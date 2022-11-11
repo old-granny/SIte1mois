@@ -1,0 +1,50 @@
+.navegation{
+    background-color: rgb(170, 250, 250);
+    z-index: 0;
+    width: 1000px;
+    height: 100px;
+    
+}
+
+.homeLink{
+    font-size: 30px;
+    position: relative;
+    left: 0px;
+    top: -0px;
+    z-index: 1;
+
+}.loginLink{
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    top: -34.5px;
+    z-index: 1;
+
+}.accountLink{
+    font-size: 30px;
+    position: relative;
+    left: 200px;
+    top: -68.9px;
+    z-index: 1;
+
+}.sellLink{
+    font-size: 30px;
+    position: relative;
+    left: 350px;
+    top: -103.5px;
+    z-index: 1;
+
+}.nouveausellingLink{
+    font-size: 30px;
+    position: relative;
+    left: 450px;
+    top: -137.5px;
+    z-index: 1;
+
+}.walletLink{
+    font-size: 30px;
+    position: relative;
+    left: 650px;
+    top: -172px;
+    z-index: 1;
+}
