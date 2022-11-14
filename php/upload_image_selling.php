@@ -1,43 +1,24 @@
 <?php
  $fichier_pour_upload = [
-  $_FILES["fichier1"]["tmp_name"],
-  $_FILES["fichier2"]["tmp_name"],
-  $_FILES["fichier3"]["tmp_name"],
-  $_FILES["fichier4"]["tmp_name"],
-  $_FILES["fichier5"]["tmp_name"],
-  $_FILES["fichier6"]["tmp_name"],
-  $_FILES["fichier7"]["tmp_name"],
-  $_FILES["fichier8"]["tmp_name"],
-  $_FILES["fichier9"]["tmp_name"],
-  $_FILES["fichier10"]["tmp_name"]
+  $_FILES["fichier"]["tmp_name"]
+ 
 ];
 
 $fichier_pour_voir_nom = [
-  $_FILES["fichier1"]["name"],
-  $_FILES["fichier2"]["name"],
-  $_FILES["fichier3"]["name"],
-  $_FILES["fichier4"]["name"],
-  $_FILES["fichier5"]["name"],
-  $_FILES["fichier6"]["name"],
-  $_FILES["fichier7"]["name"],
-  $_FILES["fichier8"]["name"],
-  $_FILES["fichier9"]["name"],
-  $_FILES["fichier10"]["name"]
+  $_FILES["fichier"]["name"]
+  
 ];
 
 
 $juste_fichier =array();
 for ($w = 0; $w <= 10; $w++){
   if (empty($fichier_pour_upload[$w])){
-        //print_r($fichier_bof);
+       
         break;
         
     }
-    
     else{
         array_push($juste_fichier, $fichier_pour_upload[$w]);
-        //break;
-        
     }
 }
 

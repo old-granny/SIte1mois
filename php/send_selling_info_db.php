@@ -10,17 +10,21 @@ $type_de_vente = $_POST['typedevente'];
 $description = $_POST['description'];
 $
 //faire liste pour envoyer db
+
+$dom = new DOMDocument('1.0');
+@$dom->loadHTMLFile($url);
+$anchors = $dom -> getElementsByTagName('img');
+$src = $anchors -> getAttribute('src');
+
+
+   
+
+
+
+print_r($src);
 $fichier_pour_voir_nom = [
-    $_FILES["fichier1"]["name"],
-    $_FILES["fichier2"]["name"],
-    $_FILES["fichier3"]["name"],
-    $_FILES["fichier4"]["name"],
-    $_FILES["fichier5"]["name"],
-    $_FILES["fichier6"]["name"],
-    $_FILES["fichier7"]["name"],
-    $_FILES["fichier8"]["name"],
-    $_FILES["fichier9"]["name"],
-    $_FILES["fichier10"]["name"]
+  $src
+    
   ];
 
 $juste_fichier_send_db =array();

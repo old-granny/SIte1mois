@@ -46,14 +46,16 @@
 /*imageGros*/
 
 .imageGros{
-    height: auto;
     width: auto;
+    max-width: 510px;
+    max-height: 300px;
+    z-index: 10;
 }.Div_imageGros{
-    width: 510px;
-    height: 300px;
     position: absolute;
     left: 650px;
     top: 10px;
+    z-index: 10;
+    width: 400px;
 }
 
 /*imageGros*/
@@ -67,7 +69,7 @@
     background-color: rgb(255, 255, 255);
     z-index: 3;
     left: 225px;
-    top: -25px;
+    top: -8px;
     
   
 }
@@ -567,8 +569,8 @@
     cursor: pointer;
     position: relative;
     z-index: 3;
-    left: 230px;
-    top: -50px;
+    left: 240px;
+    top: 678px;
     
 }
 .inputFiles{
