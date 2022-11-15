@@ -8,20 +8,12 @@ $usage = $_POST['usage'];
 $prix = $_POST['prix'];
 $type_de_vente = $_POST['typedevente'];
 $description = $_POST['description'];
-$
+
 //faire liste pour envoyer db
 
-$dom = new DOMDocument('1.0');
-@$dom->loadHTMLFile($url);
-$anchors = $dom -> getElementsByTagName('img');
-$src = $anchors -> getAttribute('src');
+$lists = $_COOKIE["lists"];
 
-
-   
-
-
-
-print_r($src);
+print_r($lists);
 $fichier_pour_voir_nom = [
   $src
     

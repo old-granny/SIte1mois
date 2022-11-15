@@ -1,24 +1,18 @@
 <?php
- $fichier_pour_upload = [
-  $_FILES["fichier"]["tmp_name"]
- 
-];
 
-$fichier_pour_voir_nom = [
-  $_FILES["fichier"]["name"]
-  
-];
+$lists = $_COOKIE["lists"];
+print_r($lists);
 
 
 $juste_fichier =array();
 for ($w = 0; $w <= 10; $w++){
-  if (empty($fichier_pour_upload[$w])){
+  if (($lists[$w])== '*'){
        
         break;
         
     }
     else{
-        array_push($juste_fichier, $fichier_pour_upload[$w]);
+        array_push($juste_fichier, $lists[$w]);
     }
 }
 
@@ -34,13 +28,13 @@ $nom_pour_page = $_POST['nom'] .= ".php";
 
 echo $nom_pour_page;
 $target_file_page = $target_dir_page . basename($nom_pour_page);
-$target_file_array1 = $target_dir_first_images . basename($fichier_pour_voir_nom[0]);
+$target_file_array1 = $target_dir_first_images . basename($juste_fichier[0]);
 
 $pour_cree_pages = 0;
 
 for ($y = 0; $y <= $size_bon; $y++){
 
-  $target_file_array = $target_dir . basename($fichier_pour_voir_nom[$y]);
+  $target_file_array = $target_dir . basename($juste_fichier[$y]);
   
 
   
@@ -52,7 +46,7 @@ for ($y = 0; $y <= $size_bon; $y++){
 
   
   if(isset($_POST["submit"])) {
-    $check = getimagesize($fichier_pour_upload[$y]);
+    $check = getimagesize($juste_fichier[$y]);
     if($check !== false) {
       $uploadOk = 1;
     } else {
@@ -65,15 +59,15 @@ for ($y = 0; $y <= $size_bon; $y++){
       // if everything is ok, try to upload file
      else {
     
-      move_uploaded_file($fichier_pour_upload[0], $target_file_array1 );
+      move_uploaded_file($juste_fichier[0], $target_file_array1 );
       
      
       
 
 
-      if (move_uploaded_file($fichier_pour_upload[$y], $target_file_array) ) {
+      if (move_uploaded_file($juste_fichier[$y], $target_file_array) ) {
       
-        echo "The file ". htmlspecialchars( basename( $fichier_pour_voir_nom[$y])). " has been uploaded.";
+        echo "The file ". htmlspecialchars( basename($juste_fichier[$y])). " has been uploaded.";
         $pour_cree_pages = $pour_cree_pages+1;
 
         

@@ -20,6 +20,7 @@
      show_image(i)
      ShowDeletingButton(i)
      CreateLists(i)
+     SetCookies(lists)
      
  }
  //Le i vas servir a dire ou on est rendu dans les inputs pour affichier l'image
@@ -91,6 +92,8 @@
  function RetirerSRCDansLists(position){
      index = position -1
      lists.splice(index, 1, '*');
+     SetCookies(lists)
+     
  }
  function AttribuerLesValeurs(position){
      j = i-1;
@@ -104,9 +107,7 @@
      CacherDeletingButton(position)
      AttribuerLesValeurs(position)
      RetirerSRCDansLists(position)
-    
-     
-     
+      
  }
  function fonction_delete2() {
      position = 2;
@@ -115,7 +116,6 @@
      AttribuerLesValeurs(position)
      RetirerSRCDansLists(position)
     
-     
  }
  function fonction_delete3() {
      position = 3;
@@ -171,12 +171,14 @@
      AttribuerLesValeurs(position)
      RetirerSRCDansLists(position)
 
+
  }function fonction_delete10() {
      position = 10;
      RetirerSRC(position)
      CacherDeletingButton(position)
      AttribuerLesValeurs(position)
      RetirerSRCDansLists(position)
+
  }
 
  function show_lists() {
@@ -339,4 +341,12 @@
         srcImages = document.getElementById(id).src
         document.getElementById('imageGros').src = srcImages
     }
+ }
+ function SetCookies(lists){
+    Deletecookies()
+    alert(lists)
+    document.cookie = "lists=" + lists;
+ }
+ function Deletecookies(){
+    document.cookie = "lists=;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
  }

@@ -20,14 +20,14 @@
             <div class="div_button_delete1" id="div_button_delete_num1">
                 <button class="buttonDelete1" onclick="fonction_delete1()" id="buttonDelete1"><img src="../CSS/images_pour_site/x-icon-white-20.jpg" alt="" class="imageDelete1"></button> 
             </div>
-            <div class="div_style_image_1"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_1" class="style_image_1" onmouseover="MouseOver1()" onmouseout="MouseOut()"></div>
+            <div class="div_style_image_1"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_1" class="style_image_1" onmouseover="MouseOver1()" onmouseout="MouseOut()" name="images1"></div>
         </div>
 
         <div class="div_total_image2" id="div_total_image2">
             <div class="div_button_delete2" id="div_button_delete_num2">
                 <button class="buttonDelete2" onclick="fonction_delete2()" id="buttonDelete2"><img src="../CSS/images_pour_site/x-icon-white-20.jpg" alt="" class="imageDelete2" ></button> 
             </div>
-            <div class="div_style_image_2"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_2" class="style_image_2" onmouseover="MouseOver2()" onmouseout="MouseOut()"></div>
+            <div class="div_style_image_2"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_2" class="style_image_2" onmouseover="MouseOver2()" onmouseout="MouseOut()" name="images2"></div>
         </div>
 
 
@@ -35,7 +35,7 @@
             <div class="div_button_delete3" id="div_button_delete_num3">
                 <button class="buttonDelete3" onclick="fonction_delete3()" id="buttonDelete3"><img src="../CSS/images_pour_site/x-icon-white-20.jpg" alt="" class="imageDelete3"></button> 
             </div>
-            <div class="div_style_image_3"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_3" class="style_image_3" onmouseover="MouseOver3()" onmouseout="MouseOut()"></div>
+            <div class="div_style_image_3"><img src="../CSS/images_pour_site/ImageBlache.PNG" alt=" " id="image_3" class="style_image_3" onmouseover="MouseOver3()" onmouseout="MouseOut()" name="images3"></div>
         </div>
 
         <div class="div_total_image4" id="div_total_image4">
@@ -106,7 +106,7 @@
         <input type="number" placeholder="price" name="prix" class="prix">
         <input type="text" placeholder="how you want to sell" name="typedevente" class="typeDeVente">
         <input type="text" placeholder="Description" name="description" class="description">
-        <button type="submit" class="buttonSubmit">Sumbit</button>
+        <button type="submit" class="buttonSubmit" name="submit">Sumbit</button>
     </form>
     <!--Input-->
 
