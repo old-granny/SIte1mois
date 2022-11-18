@@ -97,25 +97,43 @@
     
 
     <form class="form" action="sellphp.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="input" class="label_for_input">Add Image</label>
-            <input type="file" id="input" class="inputFiles" onchange="HandleLesImages()"  accept="image/*" multiple="multiple" multiple name="fichier[]">
-        </div>
+        <div id="div_input_1" class="input_1"></div>
+        <div id="div_input_2" class="input_2"></div>
+        <div id="div_input_3" class="input_3"></div>
+        <div id="div_input_4" class="input_4"></div>
+        <div id="div_input_5" class="input_5"></div>
+        <div id="div_input_6" class="input_6"></div>
+        <div id="div_input_7" class="input_7"></div>
+        <div id="div_input_8" class="input_8"></div>
+        <div id="div_input_9" class="input_9"></div>
+        <div id="div_input_10" class="input_10"></div>
         <input type="text" placeholder="Name" name="nom" class="nom">
         <input type="text" placeholder="Usage" name="usage" class="utilisation">
         <input type="number" placeholder="price" name="prix" class="prix">
         <input type="text" placeholder="how you want to sell" name="typedevente" class="typeDeVente">
         <input type="text" placeholder="Description" name="description" class="description">
         <button type="submit" class="buttonSubmit" name="submit">Sumbit</button>
+
     </form>
+
     <!--Input-->
 
     <!--Images En gros-->
     <div class="Div_imageGros">
         <img src="../CSS/images_pour_site/ImageBlache.PNG" class="imageGros" id="imageGros">
     </div>  
+
+    <button onclick="show_1()">Alert 1 File</button>
+    <button onclick="show_2()">Alert  2 File</button>
+    <button onclick="show_3()">Alert 3 File</button>
+    <button onclick="show_4()">Alert  4 File</button>
+    <button onclick="show_5()">Alert 5 File</button>
+    <button onclick="show_6()">Alert  6 File</button>
     <!--Images En gros-->
-<script src="../Javascripts/Selling.js"></script>
+<script src="../Javascripts/Selling.js?v=1"></script>
+<script src="../Javascripts/HandleGrosImage.js?v=1"></script>
+<script src="../Javascripts/show.js?v=1"></script>
+
 </body>
 
 </html>

@@ -574,9 +574,47 @@
     
 }
 .inputFiles{
-    display: none; 
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    left: 240px;
+    top: 678px;
+    display: none;
 }
 .body{
     background-color: aqua;
 }
 /*Other style*/
+
+/*Style Pour input*/
+.input_1{
+    display: block;
+}
+.input_2{
+    display: block;
+}
+.input_3{
+    display: block;
+}
+.input_4{
+    display: block;
+}
+.input_5{
+    display: block;
+}
+.input_6{
+    display: block;
+}
+.input_7{
+    display: block; 
+}
+.input_8{
+    display: block; 
+}
+.input_9{
+    display: block;
+}
+.input_10{
+    display: block;
+}
+/*Style Pour Input */
