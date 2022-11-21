@@ -1,7 +1,6 @@
-<?php
-
-//require 'C:\xampp\htdocs\SIte1mois\php\upload_image_selling.php';
+<?
 require 'C:\xampp\htdocs\SIte1mois\php\dbconn.php';
+require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
 
 $nom = $_POST['nom'];
 $usage = $_POST['usage'];
@@ -10,14 +9,6 @@ $type_de_vente = $_POST['typedevente'];
 $description = $_POST['description'];
 
 //faire liste pour envoyer db
-
-$lists = $_COOKIE["lists"];
-
-print_r($lists);
-$fichier_pour_voir_nom = [
-  $src
-    
-  ];
 
 $juste_fichier_send_db =array();
 for ($w = 0; $w <= 10; $w++){

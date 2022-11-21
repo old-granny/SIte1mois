@@ -16,13 +16,12 @@
  function HandleLesImages(){
     
      if(CheckerNomImage() == true){return}//Si erreur fonction arrete
-     i = TrouverLei()
-     CreerLeInput()
-     show_image(i)
-     ShowDeletingButton(i)
-     CreateLists(i)
-     
-     
+     show_image()
+     CreateLists()
+     ShowDeletingButton()
+     if(TrouverLei() != 1){
+        CreerLeInput()
+     }
      
  }
 
@@ -42,6 +41,7 @@
  }
 
  function CheckerNomImage(){
+    i = TrouverLei()
      longeur = (document.getElementById('input' + i.toString()).value).split('\\').pop()//La variable prend le nom de l'image
      for(let character in longeur){
          if(longeur[character]==','){
@@ -58,6 +58,7 @@
  }
 
  function CreateLists(){
+    i = TrouverLei()
      input = (document.getElementById('input' + i.toString()).value).split('\\').pop()//input = nom image
      for (let index = 0; index < lists.length; index++) {
          if (lists[index] === '*') {
@@ -67,6 +68,7 @@
      }
  }
  function show_image() {
+    i = TrouverLei()
      source_pour_images = "image_" + i.toString(); //Dit a quelle images on est rendu 
      document.getElementById(source_pour_images).src = URL.createObjectURL(event.target.files[0]);// change le source du fichier pour montrer 
      j = null
@@ -95,7 +97,7 @@
     i = TrouverLei();
     input = "input" + i.toString()
     div_input = "div_input_" + i.toString()
-    html = "<label for=\""+input+"\" class=\"label_for_input\">Add Image</label><input type=\"file\" id=\""+input+"\" class=\"inputFiles\" onchange=\"HandleLesImages()\"  accept=\"image/*\"  name=\"fichier"+ i +"\">";
+    html = "<label for=\""+input+"\" class=\"label_for_input\">Add Image "+input+"</label><input type=\"file\" id=\""+input+"\" class=\"inputFiles\" onchange=\"HandleLesImages()\"  accept=\"image/*\"  name=\"fichier"+ i +"\">";
     document.getElementById(div_input).innerHTML = html
     CacherTouteLesAutres(i)
 
@@ -126,13 +128,6 @@ function RemoveInputDiv(position){
     MontrerInput()
 
  }
- function CacherInputDuDernierDansList(){
-    x = TrouverLeDernieri() 
-    alert(x)
-    div_input = "input_" + x.toString()
-    document.getElementById(div_input).style.display = "none"
- }
-
 CreerLeInput()
 /*Handle Les Inputs*/
 
@@ -157,6 +152,7 @@ function fonction_delete2() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
     
     
    
@@ -167,7 +163,7 @@ function fonction_delete3() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
-    
+    CreerLeInput()
     
     
 }
@@ -177,6 +173,7 @@ function fonction_delete4() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
    
     
 }
@@ -185,6 +182,8 @@ function fonction_delete5() {
     RetirerSRC(position)
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
+    RetirerSRCDansLists(position)
+    CreerLeInput()
     
     
 }
@@ -194,6 +193,7 @@ function fonction_delete6() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
     
 }
 function fonction_delete7() {
@@ -202,6 +202,7 @@ function fonction_delete7() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
     
 }
 function fonction_delete8() {
@@ -210,6 +211,7 @@ function fonction_delete8() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
 }
 function fonction_delete9() {
     position = 9;
@@ -217,6 +219,8 @@ function fonction_delete9() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
+    
 
 
 }function fonction_delete10() {
@@ -225,6 +229,7 @@ function fonction_delete9() {
     CacherDeletingButton(position)
     AttribuerLesValeurs(position)
     RetirerSRCDansLists(position)
+    CreerLeInput()
 
 }
 /*Handle Les fonctions de pour delete*/
@@ -258,4 +263,5 @@ function CacherDeletingButton(position){
     document.getElementById(buttonDelete).style.display = "none"
     
 }
+CreerLeInput()
 /*Handle Les fonctions de delete  */
