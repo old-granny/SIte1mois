@@ -123,9 +123,9 @@
         <img src="../CSS/images_pour_site/ImageBlache.PNG" class="imageGros" id="imageGros">
     </div>  
     <!--Images En gros-->
-<script src="../Javascripts/Selling.js"></script>
-<script src="../Javascripts/HandleGrosImage.js"></script>
-<script src="../Javascripts/show.js"></script>
+<script src="../Javascripts/Selling.js?v=1"></script>
+<script src="../Javascripts/HandleGrosImage.js?v=1"></script>
+
 
 </body>
 

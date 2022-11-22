@@ -1,6 +1,86 @@
 <?php
 
-require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
+//require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
+
+    
+    $chiffreInput = $_COOKIE['NumberOfInput'];
+    
+    if($chiffreInput == 1){
+        $fichier_pour_upload = [ 
+        $_FILES["fichier1"]["tmp_name"]
+        ];
+
+        $fichier_pour_voir_nom = [
+            $_FILES["fichier1"]["name"]
+        ];
+      
+        
+        
+        }
+    if($chiffreInput == 2){
+        $fichier_pour_upload = [
+            $_FILES["fichier1"]["tmp_name"],
+            $_FILES["fichier2"]["tmp_name"]
+        ];
+        $fichier_pour_voir_nom = [
+            $_FILES["fichier1"]["name"],
+            $_FILES["fichier2"]["name"]
+        ];
+    
+    }
+    if($chiffreInput == 3){
+        $fichier_pour_upload = [
+            $_FILES["fichier1"]["tmp_name"],
+            $_FILES["fichier2"]["tmp_name"],
+            $_FILES["fichier3"]["tmp_name"]
+        ];
+        $fichier_pour_voir_nom = [
+            $_FILES["fichier1"]["name"],
+            $_FILES["fichier2"]["name"],
+            $_FILES["fichier3"]["name"]
+            ];
+          
+            
+    } 
+    if($chiffreInput == 4){
+        $fichier_pour_upload = [
+            $_FILES["fichier1"]["tmp_name"],
+            $_FILES["fichier2"]["tmp_name"],
+            $_FILES["fichier3"]["tmp_name"],
+            $_FILES["fichier4"]["tmp_name"]
+        ];
+        $fichier_pour_voir_nom = [
+            $_FILES["fichier1"]["name"],
+            $_FILES["fichier2"]["name"],
+            $_FILES["fichier3"]["name"],
+            $_FILES["fichier4"]["name"]
+        ];
+        
+        
+
+    } 
+    if($chiffreInput == 5){
+      $fichier_pour_upload = [
+          $_FILES["fichier1"]["tmp_name"],
+          $_FILES["fichier2"]["tmp_name"],
+          $_FILES["fichier3"]["tmp_name"],
+          $_FILES["fichier4"]["tmp_name"],
+          $_FILES["fichier5"]["tmp_name"]
+      ];
+      $fichier_pour_voir_nom = [
+          $_FILES["fichier1"]["name"],
+          $_FILES["fichier2"]["name"],
+          $_FILES["fichier3"]["name"],
+          $_FILES["fichier4"]["name"],
+          $_FILES["fichier5"]["name"]
+
+      ];
+      
+      
+
+  } 
+ 
+
 
 $juste_fichier =array();
 for ($w = 0; $w <= 10; $w++){
@@ -96,6 +176,6 @@ for ($y = 0; $y <= $size_bon; $y++){
       
 
       echo "<br> Once";
-      header("Location: Index.php");
+      //header("Location: Index.php");
         
     }

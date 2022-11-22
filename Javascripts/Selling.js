@@ -22,6 +22,7 @@
      if(TrouverLei() != 1){
         CreerLeInput()
      }
+     CreerCookies()
      
  }
 
@@ -265,3 +266,13 @@ function CacherDeletingButton(position){
 }
 CreerLeInput()
 /*Handle Les fonctions de delete  */
+
+function CreerCookies(){
+    i = TrouverLei();
+    cookies = "NumberOfInput =" +i.toString()
+    document.cookie = cookies
+}
+function DeleteCookies(){
+    document.cookie = "NumberOfInput =; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+}
+DeleteCookies()
