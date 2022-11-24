@@ -1,90 +1,6 @@
-<?
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "infos";
-
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-//require 'C:\xampp\htdocs\SIte1mois\php\dbconn.php';
-//require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
-    
-    $chiffreInput = $_COOKIE['NumberOfInput'];
-    
-    if($chiffreInput == 1){
-        $fichier_pour_upload = [ 
-        $_FILES["fichier1"]["tmp_name"]
-        ];
-
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"]
-        ];
-        
-        
-        
-        }
-    if($chiffreInput == 2){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"]
-        ];
-        
-    }
-    if($chiffreInput == 3){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"],
-            $_FILES["fichier3"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"],
-            $_FILES["fichier3"]["name"]
-            ];
-            
-            
-    } 
-    if($chiffreInput == 4){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"],
-            $_FILES["fichier3"]["tmp_name"],
-            $_FILES["fichier4"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"],
-            $_FILES["fichier3"]["name"],
-            $_FILES["fichier4"]["name"]
-        ];
-        
-        
-
-    } 
-    if($chiffreInput == 5){
-      $fichier_pour_upload = [
-          $_FILES["fichier1"]["tmp_name"],
-          $_FILES["fichier2"]["tmp_name"],
-          $_FILES["fichier3"]["tmp_name"],
-          $_FILES["fichier4"]["tmp_name"],
-          $_FILES["fichier5"]["tmp_name"]
-      ];
-      $fichier_pour_voir_nom = [
-          $_FILES["fichier1"]["name"],
-          $_FILES["fichier2"]["name"],
-          $_FILES["fichier3"]["name"],
-          $_FILES["fichier4"]["name"],
-          $_FILES["fichier5"]["name"]
-
-      ];
-      
-      
-
-  } 
- 
+<?php
+require 'C:\xampp\htdocs\SIte1mois\php\dbconn.php';
+require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
 
 $nom = $_POST['nom'];
 $usage = $_POST['usage'];
@@ -92,25 +8,15 @@ $prix = $_POST['prix'];
 $type_de_vente = $_POST['typedevente'];
 $description = $_POST['description'];
 
-//faire liste pour envoyer db
-
-$juste_fichier_send_db =array();
-for ($w = 0; $w <= 10; $w++){
-  if (empty($fichier_pour_voir_nom[$w])){
-        //print_r($fichier_bof);
-        break;
-        
-    }
-    
-    else{
-        array_push($juste_fichier_send_db, $fichier_pour_voir_nom[$w]);
-        //break;
-        
-    }
-}
-//mettre tout les fichier ensemble
-$fichier_together = implode(", ",$juste_fichier_send_db );
+//Creer premiere images
 $premiere_images = $fichier_pour_voir_nom[0];
+
+
+//mettre tout les fichier ensemble
+unset($fichier_pour_voir_nom[0]);
+$fichier_together = implode(", ",$fichier_pour_voir_nom );
+
+
 $query = "INSERT INTO `sellinginfos` (`Nom_Premiere_image`,`images`, `price`, `utilisation`, `nom`, `description_objet`, `selltype`, `id_images`) VALUES ('$premiere_images','$fichier_together', '$prix', '$usage', '$nom','$description', '$type_de_vente', NULL)";
 
 //check si le nom already exist
@@ -123,7 +29,7 @@ mysqli_query($conn,$query);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      //header("Location: ../HTML/Index.php");
+      header("Location: ../HTML/Index.php");
     $conn->close();
 }
 

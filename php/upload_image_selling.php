@@ -1,86 +1,6 @@
 <?php
 
-//require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
-
-    
-    $chiffreInput = $_COOKIE['NumberOfInput'];
-    
-    if($chiffreInput == 1){
-        $fichier_pour_upload = [ 
-        $_FILES["fichier1"]["tmp_name"]
-        ];
-
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"]
-        ];
-      
-        
-        
-        }
-    if($chiffreInput == 2){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"]
-        ];
-    
-    }
-    if($chiffreInput == 3){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"],
-            $_FILES["fichier3"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"],
-            $_FILES["fichier3"]["name"]
-            ];
-          
-            
-    } 
-    if($chiffreInput == 4){
-        $fichier_pour_upload = [
-            $_FILES["fichier1"]["tmp_name"],
-            $_FILES["fichier2"]["tmp_name"],
-            $_FILES["fichier3"]["tmp_name"],
-            $_FILES["fichier4"]["tmp_name"]
-        ];
-        $fichier_pour_voir_nom = [
-            $_FILES["fichier1"]["name"],
-            $_FILES["fichier2"]["name"],
-            $_FILES["fichier3"]["name"],
-            $_FILES["fichier4"]["name"]
-        ];
-        
-        
-
-    } 
-    if($chiffreInput == 5){
-      $fichier_pour_upload = [
-          $_FILES["fichier1"]["tmp_name"],
-          $_FILES["fichier2"]["tmp_name"],
-          $_FILES["fichier3"]["tmp_name"],
-          $_FILES["fichier4"]["tmp_name"],
-          $_FILES["fichier5"]["tmp_name"]
-      ];
-      $fichier_pour_voir_nom = [
-          $_FILES["fichier1"]["name"],
-          $_FILES["fichier2"]["name"],
-          $_FILES["fichier3"]["name"],
-          $_FILES["fichier4"]["name"],
-          $_FILES["fichier5"]["name"]
-
-      ];
-      
-      
-
-  } 
- 
-
+require 'C:\xampp\htdocs\SIte1mois\php\TrouverListsFichierPourUpload.php';
 
 $juste_fichier =array();
 for ($w = 0; $w <= 10; $w++){
@@ -103,24 +23,15 @@ $target_dir_first_images = "first_images/";
 
 $target_dir_page = "C:\\xampp\\htdocs\\SIte1mois\\HTML\\selling_pages";
 
-
 $size_bon = count($juste_fichier)-1;
 $nom_pour_page = $_POST['nom'] .= ".php";
-
-echo $nom_pour_page;
 $target_file_page = $target_dir_page . basename($nom_pour_page);
 $target_file_array1 = $target_dir_first_images . basename($fichier_pour_voir_nom[0]);
-
 $pour_cree_pages = 0;
 
-for ($y = 0; $y <= $size_bon; $y++){
+for ($y = 1; $y <= $size_bon; $y++){
 
   $target_file_array = $target_dir . basename($fichier_pour_voir_nom[$y]);
-  
-
-  
-  echo "<br>";
-  
   // Check if image file is a actual image or fake image
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file_array,PATHINFO_EXTENSION));
@@ -139,33 +50,16 @@ for ($y = 0; $y <= $size_bon; $y++){
     }
       // if everything is ok, try to upload file
      else {
-    
       move_uploaded_file($fichier_pour_upload[0], $target_file_array1 );
-      
-     
-      
-
-
-      if (move_uploaded_file($fichier_pour_upload[$y], $target_file_array) ) {
-      
+      if (move_uploaded_file($fichier_pour_upload[$y], $target_file_array) ) {      
         echo "The file ". htmlspecialchars( basename( $fichier_pour_voir_nom[$y])). " has been uploaded.";
         $pour_cree_pages = $pour_cree_pages+1;
-
-        
-        
-       
-        
-        
+   
       } else {
         echo "Sorry, there was an error uploading your file.";
       }
-    }
-
-
-
-    
+    }   
 }
-
     echo "<br>", $pour_cree_pages;
     if ($pour_cree_pages > 0) {
       //cree page

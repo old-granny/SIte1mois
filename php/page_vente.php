@@ -74,10 +74,6 @@ foreach($infos_images as $images_a_printer) {
             echo '<img src="..\\first_images\\'.$images_a_printer.'"  alt="Random image" style="width: 125px; height:125px ;"/>' . "<br /><br />";
             array_push($array_comme_dummy_first_image,$images_a_printer);
         }
-        
-        
-           
-        
     }
 
 }
@@ -91,8 +87,6 @@ foreach( $infos_images_pas_pour_dernier as $images_a_printer_pas_pour_first) {
         $image_de_image = $files[$i];     
         if (substr($image_de_image, 10) == $image_correct)  
             echo '<img src="' . $image_de_image . '" alt="Random image" style="width: 125px; height:125px ;"/>' . "<br /><br />";
-    
-
     }
 }
 
