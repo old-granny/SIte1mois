@@ -1,4 +1,11 @@
-<?php 
+<link rel="stylesheet" href="../CSS/accountCSS/account.css" type="text/css" />
+    <div class="top">
+        <?php 
+            require "../HTML/base_de_html/top.php"
+        ?>
+    </div>
+<?php
+
 
 $nomducooki = "usrid";
 $cookieid = $_COOKIE[$nomducooki];
@@ -27,13 +34,16 @@ $phone = implode($phone_array);
 
 
 
-
-//name
-echo "<p>Your account name is: $name</p>" ;
-//mail
-echo "<p>Your account email is: $mail </p>";
-//phone
-echo "<p>Your account phone is:$phone </p>";
 ?>
+<body class="body">
+    <div class="infos">
+        <?php
+        echo "<p class=\"name\">Your account name is: $name</p>" ;
+        
+        echo "<p class=\"name\">Your account email is: $mail </p>";
+        
+        echo "<p class=\"name\">Your account phone is:$phone </p>";
+        ?>
+    </div>
+</body>
 
-<a href="Index.php">Go back home</a>

@@ -3,53 +3,57 @@
 
     <title></title>
     <head>
-        <link rel="stylesheet" href="../CSS/topCSS/top.css?v=1" type="text/css"/>
+        <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
     </head>
-    <nav class="">
-        <div class="navegation">
-            <div class="homeLinkDiv">
-                <a href="C:\xampp\htdocs\SIte1mois\HTML\Index.php" class="homeLink">Home</a>
+    <nav class="box_for_navigation">
+        <div class="box_navigation">
+
+            <div class="div_home">
+                <a href="../../../SIte1mois/HTML/Index.php" class="home">Home</a>
+            </div>
+
+            <div class="div_login">          
+                <a href="../../../SIte1mois/HTML/login.php" class="login">login</a>
+            </div>
+
+            <div class="div_selling">
+                <a href="../../../SIte1mois/HTML/nouveau_sell.php" class="selling">Selling</a>        
             </div>
 
             
 
-            <div class="login">          
-                <a href="login.php" class="loginLink">login</a>
+            <div class="div_wallet">
+                <a href="../../../SIte1mois/HTML/wallet.php" class="wallet">your wallet</a>
             </div>
 
-        
-
-            <div class="account">
-                <a href="account.php" class="accountLink">account</a>
+            <div class="div_research">
+                <form action="">
+                    <input type="text" class="research" placeholder="Want to buy?">
+                </form>
             </div>
 
-        
+           <div class="div_shoppingCart">
+                <button class="buttonPourShoppingCart" onclick="buttonClick()"><img src="../../../SIte1mois/CSS/images_pour_site/panierShopping.png" class="imageShopping"></button>
+           </div>
 
-            <div class="selling" >
-                <a href="sell.php" class="sellLink">Sell?</a>        
-            </div>
 
-            <div class="selling_nouveau">
-                <a href="nouveau_sell.php" class="nouveausellingLink">Sell_nouveau?</a>        
-            </div>
-
-            
-
-            <div class="wallet">
-                <a href="wallet.php" class="walletLink">your wallet</a>
-            </div>
+            <?php 
+                $cookie_name = "usrid";
+                if(isset($_COOKIE[$cookie_name])) { ?>
+                    <div class="div_logout">
+                        <form action="../php/logout.php" method="post" class="form_button">
+                            <button name="bouton_log_out" class="button">logout</button>
+                        </form>
+                    </div>  
+                    <div class="div_account">
+                        <a href="account.php" class="account">account</a>
+                    </div>
+            <?php } ?>   
+   
         </div>
     </nav>
-    <br>
-    <div class="div_logout">
-        <?php 
-            $cookie_name = "usrid";
-            if(isset($_COOKIE[$cookie_name])) { ?>
-                <form action="../php/logout.php" method="post">
-                    <button name="bouton_log_out">Logout</button>
-                </form>
-        <?php } ?>   
-    </div>  
+    
+<script src="../../../SIte1mois/Javascripts/top/top.js"></script>
 </html>

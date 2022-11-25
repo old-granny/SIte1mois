@@ -123,10 +123,10 @@
         <img src="../CSS/images_pour_site/ImageBlache.PNG" class="imageGros" id="imageGros">
     </div>  
     <!--Images En gros-->
-<script src="../Javascripts/Selling.js?v=1"></script>
-<script src="../Javascripts/HandleGrosImage.js?v=1"></script>
+<script src="../Javascripts/sellingPage/Selling.js"></script>
+<script src="../Javascripts/sellingPage/HandleGrosImage.js"></script>
 
-
+<a href="Index.php">Go back home</a>
 </body>
 
 </html>

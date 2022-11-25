@@ -1,0 +1,12 @@
+.infos{
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: -1;
+}
+.top{
+    z-index: 2;
+}
+.body{
+    z-index: -1;
+}
