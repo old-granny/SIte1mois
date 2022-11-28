@@ -3,3 +3,143 @@
     left: 30px;
     top: 100px;
 }
+.images{
+    width: 375px;
+    height: 225px;
+}
+.colonne1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.colonne2{
+    position: absolute;
+    left: 0px;
+    top: 350px;
+}
+.colonne3{
+    position: absolute;
+    left: 0px;
+    top: 700px;
+}
+.colonne4{
+    position: absolute;
+    left: 0px;
+    top: 1050px;
+}
+.colonne5{
+    position: absolute;
+    left: 0px;
+    top: 1400px;
+}
+.colonne6{
+    position: absolute;
+    left: 0px;
+    top: 1750px;
+}
+.colonne7{
+    position: absolute;
+    left: 0px;
+    top: 2100px;
+}
+.colonne8{
+    position: absolute;
+    left: 0px;
+    top: 2450px;
+}
+.colonne9{
+    position: absolute;
+    left: 0px;
+    top: 2800px;
+}
+.colonne10{
+    position: absolute;
+    left: 0px;
+    top: 3150px;
+}
+.colonne11{
+    position: absolute;
+    left: 0px;
+    top: 3500px;
+}
+.colonne12{
+    position: absolute;
+    left: 0px;
+    top: 3850px;
+}
+.colonne13{
+    position: absolute;
+    left: 0px;
+    top: 4200px;
+}
+.colonne14{
+    position: absolute;
+    left: 0px;
+    top: 4550px;
+}
+.colonne15{
+    position: absolute;
+    left: 0px;
+    top: 4900px;
+}
+.colonne16{
+    position: absolute;
+    left: 0px;
+    top: 5250px;
+}
+.colonne17{
+    position: absolute;
+    left: 0px;
+    top: 5600px;
+}
+.colonne18{
+    position: absolute;
+    left: 0px;
+    top: 5950px;
+}
+.colonne19{
+    position: absolute;
+    left: 0px;
+    top: 6300px;
+}
+.colonne20{
+    position: absolute;
+    left: 0px;
+    top: 6650px;
+}
+
+
+
+
+
+
+
+.ranger1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.ranger2{
+    position: absolute;
+    left: 475px;
+    top: 0px;
+}
+.ranger3{
+    position: absolute;
+    left: 975px;
+    top: 0px;
+}
+.ranger4{
+    position: absolute;
+    left: 1465px;
+    top: 0px;
+}
+.ranger5{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+body{
+    overflow-x: hidden;
+}
