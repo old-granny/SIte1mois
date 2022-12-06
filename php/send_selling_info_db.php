@@ -29,6 +29,10 @@ mysqli_query($conn,$query);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
+      if (isset($_COOKIE['NumberOfInput'])) {
+        unset($_COOKIE['NumberOfInput']);
+        setcookie('NumberOfInput', '', time() - 3600); // empty value and old timestamp
+    }
       header("Location: ../HTML/Index.php");
     $conn->close();
 }

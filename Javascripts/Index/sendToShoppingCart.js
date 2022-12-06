@@ -1,9 +1,15 @@
 function AddToCart(id_images){
-    document.cookie = "shopping_carte= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+    //Le X va egaler a toute les cookies
     var x =  document.cookie
+    //check si le cookies shopping_carte est present ou non
+    alert(x[0])
     if(x[0] == 's'){
+        //delete l'ancien
         document.cookie = "shopping_carte= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+
         i = 0;
+        //le string cookies vas servire a juste garder les cookies du shopping carte
+
         cookies = "";
         while(i <= x.length){
             if( x[i] == ";"){
@@ -17,38 +23,11 @@ function AddToCart(id_images){
         
         id_string = cookies.toString()
         id = id_string.substring(15)
-        if(EstDansLists(id, id_images)){
-            alert("Vous avez deja cette article")
-            return;
-        }
+        alert(id_images, id_string)
         document.cookie = "shopping_carte=" + id +"," + id_images;
     }
     else{
         document.cookie = "shopping_carte=" + id_images + "";
     }
     
-}
-function EstDansLists(id , id_images){
-    cpt = 0;
-    cpt2 = 0;
-    dejaDansLists = false;
-    while(cpt <= id.length){
-        lists = [];
-        ids = "";
-        if(id[cpt] = ","){
-            lists.append(ids)
-            ids = "";
-        }
-        else{
-            ids += id[cpt]
-        }
-        cpt++;
-    }
-    while(cpt2 <= lists.length){
-        if(lists[cpt2] == id_images){
-            dejaDansLists = true;
-        }
-        cpt2++;
-    }
-    return dejaDansLists;
 }
