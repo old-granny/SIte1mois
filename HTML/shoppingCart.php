@@ -4,4 +4,5 @@
     </head>
     <?php  require "../../SIte1mois/HTML/base_de_html/top.php"?>
     <h1 class="h1">Your Cart : </h1>
+   <?php require "../../SIte1mois/HTML/shoppingCart/MontrerLesArticles.php" ?>
 </html>
