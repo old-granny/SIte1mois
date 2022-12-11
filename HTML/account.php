@@ -2,18 +2,14 @@
 <link rel="stylesheet" href="../CSS/accountCSS/account.css" type="text/css" />
     <div class="top">
         <?php 
-            require "../php/showInfosForAccountPage.php";
+            require 'C:\xampp\htdocs\SIte1mois\php\HandlePageAccount\showInfosForAccountPage.php';
             require "../HTML/base_de_html/top.php"
         ?>
     </div>
 <body class="body">
     <div class="infos">
         <?php
-        echo "<p class=\"name\">Your account name is: $name</p>" ;
-        
-        echo "<p class=\"name\">Your account email is: $mail </p>";
-        
-        echo "<p class=\"name\">Your account phone is:$phone </p>";
+         require 'C:\xampp\htdocs\SIte1mois\php\HandlePageAccount\showInfosForAccountPage.php';
         ?>
     </div>
 </body>

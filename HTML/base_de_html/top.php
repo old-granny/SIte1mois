@@ -43,7 +43,7 @@
                 $cookie_name = "usrid";
                 if(isset($_COOKIE[$cookie_name])) { ?>
                     <div class="div_logout">
-                        <form action="../php/logout.php" method="post" class="form_button">
+                        <form action="../../../SIte1mois/php/accountSystem/logout.php" method="post" class="form_button">
                             <button name="bouton_log_out" class="button">logout</button>
                         </form>
                     </div>  

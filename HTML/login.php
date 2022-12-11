@@ -1,5 +1,5 @@
 <html>
-    <form action="../php/loginphp.php" method="post">
+    <form action="../php/accountSystem/loginphp.php" method="post">
         <input type="text" name="usr" placeholder="email">
         <input type="passaword" name="password" placeholder="password">
         <button type="submit" name="boutton">Go!</button>
