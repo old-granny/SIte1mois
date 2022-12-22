@@ -3,7 +3,7 @@
 
     <title></title>
     <head>
-        <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css" type="text/css"/>
+        <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css?v=1" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
     </head>
@@ -36,12 +36,22 @@
 
            <div class="div_shoppingCart">
                 <button class="buttonPourShoppingCart" onclick="buttonClick()"><img src="../../../SIte1mois/CSS/images_pour_site/panierShopping.png" class="imageShopping"></button>
+               
+            <div class="div_number_item">
+                <p class="numberOfItems" id="numberOfItem"></p>
+            </div>
+
+            <div>
+                <form action="../../php/deletingCookies.php">
+                    <button onclick="DeleteAllCookies()" style="position: absolute; left:-300px;top:0px;z-index:3;" type="submit">DeleteAllCookies</button>
+                </form>
+            </div>
            </div>
 
 
             <?php 
-                $cookie_name = "usrid";
-                if(isset($_COOKIE[$cookie_name])) { ?>
+                $cookie_name_userid = "usrid";
+                if(isset($_COOKIE[ $cookie_name_userid])) { ?>
                     <div class="div_logout">
                         <form action="../../../SIte1mois/php/accountSystem/logout.php" method="post" class="form_button">
                             <button name="bouton_log_out" class="button">logout</button>
@@ -55,5 +65,5 @@
         </div>
     </nav>
     
-<script src="../../../SIte1mois/Javascripts/top/top.js"></script>
+<script src="../../../SIte1mois/Javascripts/top/top.js?v=1"></script>
 </html>

@@ -3,7 +3,7 @@
     <div class="top">
         <?php 
             require 'C:\xampp\htdocs\SIte1mois\php\HandlePageAccount\showInfosForAccountPage.php';
-            require "../HTML/base_de_html/top.php"
+            require '../HTML/base_de_html/top.php';
         ?>
     </div>
 <body class="body">

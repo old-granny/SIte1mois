@@ -11,5 +11,5 @@
             </div>  
     </body>
 
-    <script src="../Javascripts/Index/sendToShoppingCart.js"></script>
+    <script src="../Javascripts/Index/sendToShoppingCart.js?v=1"></script>
 </html>
