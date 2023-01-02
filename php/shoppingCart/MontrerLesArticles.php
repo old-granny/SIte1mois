@@ -18,18 +18,46 @@ foreach($cookie as $id){
     $first_image_array = mysqli_fetch_array($resulta_pour_trouver_first_image, MYSQLI_ASSOC);
     $first_image = implode($first_image_array);
 
-    echo "
-    <div class=\"ranger$position\">
-        <h2 class=\"nom\">$nom</h2>
-        <a href=\"../../SIte1mois/HTML/selling_pages/$nomPage \"> 
-            <img class=\"img$position\"src=\"../HTML/first_images/$first_image\"></img> 
-        </a>
-        <div>
-            <button class=\"bouttonSaveForLater\" onclick=\"SaveForLAter()\">Save for later</button>
-            <button class=\"bouttonRemoveItem\" onclick=\"RemoveItem()\">remove item from shopping cart</button>
+    if($position == count($cookie) -1){
+        echo"
+        <div class=\"ranger$position\">
+            <h2 class=\"nom\">$nom</h2>
+            <a href=\"../../SIte1mois/HTML/selling_pages/$nomPage \"> 
+                <img class=\"img$position\"src=\"../HTML/first_images/$first_image\"></img> 
+            </a>
+            <div>
+                <button class=\"bouttonSaveForLater\" onclick=\"SaveForLAter()\">Save for later</button>
+                <button class=\"bouttonRemoveItem\" onclick=\"RemoveItem()\">remove item from shopping cart</button>
+            </div>
+            <div class=\"saveForLater\">
+                    <h1>Save for later : </h1>
+                </div>
         </div>
-    </div>
-    ";
+        ";
+    }
+
+    else{
+        echo "
+        <div class=\"ranger$position\">
+            <h2 class=\"nom\">$nom</h2>
+            <a href=\"../../SIte1mois/HTML/selling_pages/$nomPage \"> 
+                <img class=\"img$position\"src=\"../HTML/first_images/$first_image\"></img> 
+            </a>
+            <div>
+                <button class=\"bouttonSaveForLater\" onclick=\"SaveForLAter()\">Save for later</button>
+                <button class=\"bouttonRemoveItem\" onclick=\"RemoveItem()\">remove item from shopping cart</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        ";
+        
+    }
+    
     $position++;
+    
+    
 }
+
+
 

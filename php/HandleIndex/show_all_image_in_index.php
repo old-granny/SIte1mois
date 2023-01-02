@@ -36,7 +36,8 @@ require 'C:\xampp\htdocs\SIte1mois\php\dbconn.php';
 
             $nomPourPresenter = substr($nom_pour_cree_page,0, -4);
 
-            echo "<div class=colonne$colonne> <div class=ranger$ranger>", "<h4>$nomPourPresenter</h4>", "<br>" , '<a href="selling_pages/'.$nom_pour_cree_page.'"> <img src="'.$image .'" alt="Random image" class="images"/></a> <button onclick="AddToCart('.$id.') , montrerNombreArticle()"> add to shopping cart</button> '."<h5 style=\" position: relative; left : 160px; top: -35px;\">$prix : price </h5> <br/><br/></div></div>";
+            echo "
+            <div class=colonne$colonne> <div class=ranger$ranger>", "<h4>$nomPourPresenter</h4>", "<br>" , '<a href="selling_pages/'.$nom_pour_cree_page.'"> <img src="'.$image .'" alt="Random image" class="images"/></a> <button onclick="AddToCart('.$id.') , montrerNombreArticle()"> add to shopping cart</button> '."<h5 style=\" position: relative; left : 160px; top: -35px;\">$prix : price </h5> <br/><br/></div></div>";
             $ranger++;
             if($ranger == 5){
               $colonne++;
