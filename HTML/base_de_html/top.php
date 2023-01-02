@@ -3,7 +3,7 @@
 
     <title></title>
     <head>
-        <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css?v=1" type="text/css"/>
+        <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css?v=2" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
     </head>
@@ -42,12 +42,12 @@
             </div>
 
             <div>
-                <form action="../../php/deletingCookies.php">
+
+                <form action="../../../SIte1mois/php/deletingCookies.php">
                     <button onclick="DeleteAllCookies()" style="position: absolute; left:-300px;top:0px;z-index:3;" type="submit">DeleteAllCookies</button>
                 </form>
             </div>
            </div>
-
 
             <?php 
                 $cookie_name_userid = "usrid";
@@ -66,4 +66,5 @@
     </nav>
     
 <script src="../../../SIte1mois/Javascripts/top/top.js?v=1"></script>
+<script src="../../../SIte1mois/Javascripts/top/showNumberOfItem.js?v=1"></script>
 </html>

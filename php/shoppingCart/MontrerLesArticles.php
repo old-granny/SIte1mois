@@ -18,7 +18,18 @@ foreach($cookie as $id){
     $first_image_array = mysqli_fetch_array($resulta_pour_trouver_first_image, MYSQLI_ASSOC);
     $first_image = implode($first_image_array);
 
-    echo"<div class=\"ranger$position\"><h2 class=\"nom\">$nom</h2><a href=\"../../SIte1mois/HTML/selling_pages/$nomPage \"> <img class=\"img$position\"src=\"../HTML/first_images/$first_image\"></img> </a></div>";
+    echo "
+    <div class=\"ranger$position\">
+        <h2 class=\"nom\">$nom</h2>
+        <a href=\"../../SIte1mois/HTML/selling_pages/$nomPage \"> 
+            <img class=\"img$position\"src=\"../HTML/first_images/$first_image\"></img> 
+        </a>
+        <div>
+            <button class=\"bouttonSaveForLater\" onclick=\"SaveForLAter()\">Save for later</button>
+            <button class=\"bouttonRemoveItem\" onclick=\"RemoveItem()\">remove item from shopping cart</button>
+        </div>
+    </div>
+    ";
     $position++;
 }
 

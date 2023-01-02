@@ -61,7 +61,7 @@ foreach($infos_images as $images_a_printer) {
         'png'
  );
     //allez chercjer tout les fichier dans first_images
-    $files_pour_first = glob("../first_images/*.*");
+    $files_pour_first = glob("../../first_images/*.*");
     
     foreach ($files_pour_first as $image){
    

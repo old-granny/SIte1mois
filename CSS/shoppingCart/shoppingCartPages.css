@@ -7,7 +7,7 @@
 .cart{
     position: absolute;
     left: 0px;
-    top: 10%;
+    top: 0px;
 }
 .nom{
     position: relative;
@@ -25,42 +25,42 @@
 .ranger1{
     position: absolute;
     left: 10px;
-    top: 300px;
+    top: 350px;
     width: 100px;
   
 }
 .ranger2{
     position: absolute;
     left: 10px;
-    top: 500px;
+    top: 550px;
     width: 100px;
 
 }
 .ranger3{
     position: absolute;
     left: 10px;
-    top: 700px;
+    top: 800px;
     width: 100px;
   
 }
 .ranger4{
     position: absolute;
     left: 10px;
-    top: 900px;
+    top: 1000px;
     width: 100px;
     
 }
 .ranger5{
     position: absolute;
     left: 10px;
-    top: 1100px;
+    top: 1200px;
     width: 100px;
     
 }
 .ranger6{
     position: absolute;
     left: 10px;
-    top: 1300px;
+    top: 1400px;
     width: 100px;
    
 }
@@ -109,4 +109,14 @@
     height: 100%;
     position: relative;
     z-index: 0;
+}
+.bouttonSaveForLater{
+    position: relative;
+    width: 150px;
+    height: 25px;
+}
+.bouttonRemoveItem{
+    position: relative;
+    width: 150px;
+    height: 25px;
 }

@@ -7,5 +7,9 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
         setcookie($name, '', time()-1000);
         setcookie($name, '', time()-1000, '/');
     }
+   
 }
-header("Location: ../../HTML/Index.php");
+header("Location: ../../SIte1mois/HTML/Index.php");
+echo "<h1>hello</h1>";
+
+

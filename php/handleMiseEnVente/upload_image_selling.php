@@ -64,7 +64,7 @@ for ($y = 1; $y <= $size_bon; $y++){
     if ($pour_cree_pages > 0) {
       //cree page
 
-      $whole_php_data_from_page_vente = file_get_contents('C:\\xampp\\htdocs\\SIte1mois\\php\\page_vente.php');
+      $whole_php_data_from_page_vente = file_get_contents('C:\\xampp\\htdocs\\SIte1mois\\php\\handleMiseEnVente\\page_vente.php');
       $la_page = fopen("C:\\xampp\\htdocs\\SIte1mois\\HTML\\selling_pages\\$nom_pour_page", 'x');
       fwrite($la_page, $whole_php_data_from_page_vente);
       
