@@ -5,6 +5,8 @@
     <head>
         <link rel="stylesheet" href="../../../SIte1mois/CSS/topCSS/top.css?v=2" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="../../../SIte1mois/Javascripts/top/top.js?v=1"></script>
+        
 
     </head>
     <nav class="box_for_navigation">
@@ -64,7 +66,4 @@
    
         </div>
     </nav>
-    
-<script src="../../../SIte1mois/Javascripts/top/top.js?v=1"></script>
-<script src="../../../SIte1mois/Javascripts/top/showNumberOfItem.js?v=1"></script>
 </html>
